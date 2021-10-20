@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="@dimen/login_image"
+        android:layout_height="@dimen/login_image"
+        android:src="@drawable/ic_action_name"
+        />
+
+    <EditText
+        android:layout_margin="@dimen/login_margin"
+        android:inputType="number"
+        android:drawablePadding="@dimen/icon_padding"
+        android:drawableStart="@drawable/ic_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name" />
+
+
+    <EditText
+        android:layout_margin="@dimen/login_margin"
+        android:drawablePadding="@dimen/icon_padding"
+        android:inputType="numberPassword"
+        android:drawableStart="@drawable/ic_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_password"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relative_button"
+            android:layout_alignParentRight="true"
+            />
+        <EditText
+            android:id="@+id/etRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/relative_text"
+            android:layout_toLeftOf="@id/btnRelative"
+            />
+
+    </RelativeLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_button"
+        />
+
+</LinearLayout>
