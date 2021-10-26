@@ -29,6 +29,7 @@
 
 
     <EditText
+        android:id="@+id/etPassword"
         android:layout_margin="@dimen/login_margin"
         android:drawablePadding="@dimen/icon_padding"
         android:inputType="numberPassword"
@@ -37,6 +38,18 @@
         android:layout_height="wrap_content"
         android:hint="@string/user_password"
         app:layout_constraintTop_toBottomOf="@id/etUsername"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_forgot_password"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/fic_color"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <Button
