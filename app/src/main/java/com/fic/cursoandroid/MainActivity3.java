@@ -3,15 +3,12 @@ package com.fic.cursoandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TextView;
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_main3);
     }
 }
