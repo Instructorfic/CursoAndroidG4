@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/txtHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/btnShowView"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_web_page_view"
+        app:layout_constraintTop_toBottomOf="@id/txtHome"
+        />
+
+
+    <Button
+        android:id="@+id/btnDial"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_call"
+        app:layout_constraintTop_toBottomOf="@id/btnShowView"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

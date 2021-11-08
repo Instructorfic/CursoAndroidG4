@@ -53,6 +53,7 @@
         />
 
     <Button
+        android:id="@+id/btnLogin"
         android:backgroundTint="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
