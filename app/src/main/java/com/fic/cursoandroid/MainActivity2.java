@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -19,6 +21,26 @@ public class MainActivity2 extends AppCompatActivity {
         Button btnShowView = (Button) findViewById(R.id.btnShowView);
         Button btnDial = (Button) findViewById(R.id.btnDial);
         Button btnSettings = (Button) findViewById(R.id.btnSettings);
+        TextView txtMessage = (TextView) findViewById(R.id.txtMessage);
+        TextView txtError = (TextView) findViewById(R.id.txtError);
+
+        /*Uri webSite = getIntent().getData();
+        Toast.makeText(getApplicationContext(),webSite.toString(),Toast.LENGTH_LONG).show();*/
+
+        /*String getStringMessage = getIntent().getStringExtra("message");
+        Toast.makeText(getApplicationContext(),getStringMessage,Toast.LENGTH_LONG).show();*/
+
+        Bundle extras = getIntent().getExtras();
+
+        String message = extras.getString("message","El valor es incorrecto");
+        int error = extras.getInt("error",-1);
+
+        txtMessage.setText(message);
+        txtError.setText(String.valueOf(error));
+
+
+
+
 
         btnShowView.setOnClickListener(new View.OnClickListener() {
             @Override
