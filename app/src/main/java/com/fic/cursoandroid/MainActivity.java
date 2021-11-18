@@ -5,17 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
     final String webPageURL = "http://www.google.com";
+    final String MAIN_ACTIVITY_TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setLog("onCreate Called");
         setContentView(R.layout.activity_constraint_layout);
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -40,4 +44,41 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void setLog(String text){
+        Log.d(MAIN_ACTIVITY_TAG,text);
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        setLog("onStart Called");
+        //Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_LONG).show();
+    }
+
+    protected void onResume(){
+        super.onResume();
+        setLog("onResume Called");
+    }
+
+    protected void onPause(){
+        super.onPause();
+        setLog("onPause Called");
+    }
+
+    protected void onRestart(){
+        super.onRestart();
+        setLog("onRestart Called");
+    }
+
+    protected void onStop(){
+        super.onStop();
+        setLog("onStop Called");
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        setLog("onDestroy Called");
+    }
+
 }
