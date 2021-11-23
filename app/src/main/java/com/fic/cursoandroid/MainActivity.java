@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     final String webPageURL = "http://www.google.com";
     final String MAIN_ACTIVITY_TAG = MainActivity.class.getSimpleName();
@@ -24,25 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent showActivity = new Intent(getApplicationContext(),MainActivity2.class);
-                //showActivity.setData(Uri.parse(webPageURL));
-
-                String message = "Hola, Actividad 2";
-                int error = 0;
-
-                Bundle bundle = new Bundle();
-                bundle.putString("message",message);
-                bundle.putInt("error",error);
-
-                showActivity.putExtras(bundle);
-
-                //showActivity.putExtra("message",message);
-                startActivity(showActivity);
-            }
-        });
+        //btnLogin.setOnClickListener(testOnClickListener); //Opción 2 para gestionar clic de un botón
+        //btnLogin.setOnClickListener(new ClickedButton()); // Opción 3
+        //btnLogin.setOnClickListener(this); //Opción 4 para gestionar clic de un botón
     }
 
     private void setLog(String text){
@@ -79,6 +63,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy(){
         super.onDestroy();
         setLog("onDestroy Called");
+    }
+
+    private View.OnClickListener testOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startTestActivity();
+        }
+    };
+
+    private void startTestActivity(){
+        Intent showActivity = new Intent(getApplicationContext(),MainActivity2.class);
+        //showActivity.setData(Uri.parse(webPageURL));
+
+        String message = "Hola, Actividad 2";
+        int error = 0;
+
+        Bundle bundle = new Bundle();
+        bundle.putString("message",message);
+        bundle.putInt("error",error);
+
+        showActivity.putExtras(bundle);
+
+        //showActivity.putExtra("message",message);
+        startActivity(showActivity);
+    }
+
+    class ClickedButton implements View.OnClickListener{
+        @Override
+        public void onClick(View v){
+            startTestActivity();
+        }
+    }
+
+    @Override
+    public void onClick(View v){
+        startTestActivity();
     }
 
 }
