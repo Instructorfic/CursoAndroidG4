@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
-        //btnLogin.setOnClickListener(testOnClickListener); //Opción 2 para gestionar clic de un botón
+        btnLogin.setOnClickListener(testOnClickListener); //Opción 2 para gestionar clic de un botón
         //btnLogin.setOnClickListener(new ClickedButton()); // Opción 3
         //btnLogin.setOnClickListener(this); //Opción 4 para gestionar clic de un botón
     }
