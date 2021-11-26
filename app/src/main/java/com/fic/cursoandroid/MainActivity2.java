@@ -26,6 +26,7 @@ public class MainActivity2 extends AppCompatActivity {
         Button btnSettings = (Button) findViewById(R.id.btnSettings);
         TextView txtMessage = (TextView) findViewById(R.id.txtMessage);
         TextView txtError = (TextView) findViewById(R.id.txtError);
+        TextView txtName = findViewById(R.id.txtName);
 
         /*Uri webSite = getIntent().getData();
         Toast.makeText(getApplicationContext(),webSite.toString(),Toast.LENGTH_LONG).show();*/
@@ -37,9 +38,11 @@ public class MainActivity2 extends AppCompatActivity {
 
         String message = extras.getString("message","El valor es incorrecto");
         int error = extras.getInt("error",-1);
+        String name = extras.getString("name","Nombre de usuario no válido");
 
         txtMessage.setText(message);
         txtError.setText(String.valueOf(error));
+        txtName.setText(name);
 
 
 
@@ -90,5 +93,21 @@ public class MainActivity2 extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
         return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.menuOption1:
+                showPage(item);
+                return true;
+            case R.id.menuOption2:
+                dialPhoneNumber(item);
+                return true;
+            case R.id.menuOption3:
+                showSettings(item);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

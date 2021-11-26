@@ -18,7 +18,7 @@
     <EditText
         android:id="@+id/etUsername"
         android:layout_margin="@dimen/login_margin"
-        android:inputType="number"
+        android:inputType="text"
         android:drawablePadding="@dimen/icon_padding"
         android:drawableStart="@drawable/ic_person"
         android:layout_width="match_parent"

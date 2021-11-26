@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -76,12 +77,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent showActivity = new Intent(getApplicationContext(),MainActivity2.class);
         //showActivity.setData(Uri.parse(webPageURL));
 
+        EditText etUsername = findViewById(R.id.etUsername);
+
         String message = "Hola, Actividad 2";
         int error = 0;
+        String name = etUsername.getText().toString();
+
 
         Bundle bundle = new Bundle();
         bundle.putString("message",message);
         bundle.putInt("error",error);
+        bundle.putString("name",name);
 
         showActivity.putExtras(bundle);
 

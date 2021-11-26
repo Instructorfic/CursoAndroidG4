@@ -61,5 +61,13 @@
         app:layout_constraintTop_toBottomOf="@id/txtMessage"
         />
 
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_margin"
+        app:layout_constraintTop_toBottomOf="@id/txtError"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
