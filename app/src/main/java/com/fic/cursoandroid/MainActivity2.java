@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -23,18 +24,17 @@ import org.w3c.dom.Text;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    //Declaraciones de variables
     private ImageButton btnPopUpMenu;
     private ActionMode actionMode;
     private Button btnAlert;
+    private EditText etAlertMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Button btnShowView = (Button) findViewById(R.id.btnShowView);
-        Button btnDial = (Button) findViewById(R.id.btnDial);
-        Button btnSettings = (Button) findViewById(R.id.btnSettings);
         TextView txtMessage = (TextView) findViewById(R.id.txtMessage);
         TextView txtError = (TextView) findViewById(R.id.txtError);
         TextView txtName = findViewById(R.id.txtName);
@@ -79,12 +79,20 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+        //Identificar a los widgets correspondientes.
         btnAlert = findViewById(R.id.btnAlert);
+        etAlertMessage = findViewById(R.id.etAlertMessage);
 
+        //Implementación del método onClick del botón btnAlert
         btnAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAlert();
+                String message = etAlertMessage.getText().toString();
+                //Validar la caja de texto para mandar llamar el método showAlert.
+                if(validateEditText(etAlertMessage)){
+                    showAlert(message);
+                }
+
             }
         });
 
@@ -103,32 +111,6 @@ public class MainActivity2 extends AppCompatActivity {
         txtMessage.setText(message);
         txtError.setText(String.valueOf(error));
         txtName.setText(name);
-
-
-
-
-
-        btnShowView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        btnDial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
 
     }
 
@@ -223,10 +205,23 @@ public class MainActivity2 extends AppCompatActivity {
         }
     };
 
-    public void showAlert(){
+    //Definición de método para crear y visualizar un cuadro de diálogo, pasando una cadena como parámetro, y visualizarla en el mensaje.
+    public void showAlert(String message){
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity2.this);
         alertDialog.setTitle(R.string.alert_title);
-        alertDialog.setMessage(R.string.alert_message);
+        alertDialog.setMessage(message);
         alertDialog.show();
+    }
+
+    //Método para validar el contenido una instancia de un edittext
+    public boolean validateEditText(EditText editText){
+        boolean isValid = true;
+        if(editText.length() == 0){
+            editText.requestFocus();
+            editText.setError(getText(R.string.required_edittext));
+            isValid = false;
+        }
+
+        return isValid;
     }
 }

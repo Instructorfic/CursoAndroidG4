@@ -17,40 +17,12 @@
         />
 
 
-    <Button
-        android:id="@+id/btnShowView"
-        android:backgroundTint="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_web_page_view"
-        app:layout_constraintTop_toBottomOf="@id/txtHome"
-        />
-
-
-    <Button
-        android:id="@+id/btnDial"
-        android:backgroundTint="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_call"
-        app:layout_constraintTop_toBottomOf="@id/btnShowView"
-        />
-
-    <Button
-        android:id="@+id/btnSettings"
-        android:backgroundTint="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_settings"
-        app:layout_constraintTop_toBottomOf="@id/btnDial"
-        />
-
     <TextView
         android:id="@+id/txtMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/login_margin"
-        app:layout_constraintTop_toBottomOf="@id/btnSettings"
+        app:layout_constraintTop_toBottomOf="@id/txtHome"
         />
 
     <TextView
@@ -94,6 +66,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_alert"
+        app:layout_constraintTop_toBottomOf="@id/etAlertMessage"
+        />
+
+    <EditText
+        android:id="@+id/etAlertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_margin"
         app:layout_constraintTop_toBottomOf="@id/btnPopUpMenu"
         />
 

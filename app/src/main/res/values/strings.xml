@@ -13,9 +13,9 @@
     <string name="home_web_page_view">Mostrar página web</string>
     <string name="home_call">Llamar</string>
     <string name="home_settings">Configuración</string>
-    <string name="menu_option1">Opción 1</string>
-    <string name="menu_option2">Opción 2</string>
-    <string name="menu_option3">Opción 3</string>
+    <string name="menu_option1">Mostrar sitio web</string>
+    <string name="menu_option2">Marcación telefónica</string>
+    <string name="menu_option3">Configuración del dispositivo</string>
     <string name="menu_sub1">Submenú 1</string>
     <string name="menu_sub_option1">Opción submenú 1</string>
     <string name="menu_context_edit">Editar</string>
@@ -23,4 +23,5 @@
     <string name="alert_title">Alerta</string>
     <string name="alert_message">Mensaje de alerta</string>
     <string name="btn_alert">Mostrar alert</string>
+    <string name="required_edittext">Campo obligatorio</string>
 </resources>
