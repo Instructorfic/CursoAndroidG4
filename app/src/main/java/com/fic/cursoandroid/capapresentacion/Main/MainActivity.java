@@ -1,18 +1,16 @@
-package com.fic.cursoandroid;
+package com.fic.cursoandroid.capapresentacion.Main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.fic.cursoandroid.capadatos.Student;
+import com.fic.cursoandroid.R;
+import com.fic.cursoandroid.capapresentacion.MainActivity2;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -80,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
     private void startTestActivity(){
-        Intent showActivity = new Intent(getApplicationContext(),MainActivity2.class);
+        Intent showActivity = new Intent(getApplicationContext(), MainActivity2.class);
         //showActivity.setData(Uri.parse(webPageURL));
 
         EditText etUsername = findViewById(R.id.etUsername);

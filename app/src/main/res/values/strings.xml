@@ -24,4 +24,13 @@
     <string name="alert_message">Mensaje de alerta</string>
     <string name="btn_alert">Mostrar alert</string>
     <string name="required_edittext">Campo obligatorio</string>
+    <string name="add_student_name">Nombre(s)</string>
+    <string name="add_student_paternal_surname">Apellido paterno</string>
+    <string name="add_student_maternal_surname">Apellido paterno</string>
+    <string name="add_student_email">Correo electrónico</string>
+    <string name="add_student_phone_number">Número telefónico</string>
+    <string name="add_student_group">Grupo</string>
+    <string name="add_student_grade">Grado</string>
+    <string name="add_student_button_save">Guardar datos</string>
+    <string name="add_student_button_cancel">Cancelar</string>
 </resources>

@@ -1,8 +1,10 @@
-package com.fic.cursoandroid;
+package com.fic.cursoandroid.capapresentacion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.fic.cursoandroid.R;
 
 public class MainActivity3 extends AppCompatActivity {
 

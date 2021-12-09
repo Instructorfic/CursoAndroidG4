@@ -1,4 +1,4 @@
-package com.fic.cursoandroid;
+package com.fic.cursoandroid.capapresentacion;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +20,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.fic.cursoandroid.R;
 
 public class MainActivity2 extends AppCompatActivity {
 
