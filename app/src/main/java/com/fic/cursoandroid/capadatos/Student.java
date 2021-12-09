@@ -10,7 +10,7 @@ public class Student {
     private String grade;
     private String group;
 
-    public Student(long id, String name, String paternalSurname, String maternalSurname, String email, String phoneNumber, String grade, String group){
+    public Student(long id, String name, String paternalSurname, String maternalSurname, String email, String phoneNumber, String grade, String group) {
         this.id = id;
         this.name = name;
         this.paternalSurname = paternalSurname;
@@ -29,14 +29,13 @@ public class Student {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-
 
     public String getPaternalSurname() {
         return paternalSurname;
@@ -86,9 +85,11 @@ public class Student {
         this.group = group;
     }
 
-    public String toString(){
-        return "Student{name="+name+"}";
-
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                "}";
     }
+
 
 }
