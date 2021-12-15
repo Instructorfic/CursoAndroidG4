@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/radius"
+    app:cardElevation="@dimen/radius"
+    app:cardMaxElevation="@dimen/elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivStudent"
+            android:layout_width="@dimen/login_image"
+            android:layout_height="@dimen/login_image"
+            android:layout_margin="@dimen/login_margin"
+            android:src="@drawable/ic_person"/>
+
+        <TextView
+            android:id="@+id/txtStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivStudent"
+            android:layout_margin="@dimen/login_margin"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txtStudentLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin"
+            android:layout_toEndOf="@id/ivStudent"
+            android:layout_below="@id/txtStudentName"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
