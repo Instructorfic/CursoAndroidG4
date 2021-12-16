@@ -33,4 +33,6 @@
     <string name="add_student_grade">Grado</string>
     <string name="add_student_button_save">Guardar datos</string>
     <string name="add_student_button_cancel">Cancelar</string>
+    <string name="add_student_cancel">Cancelar</string>
+    <string name="add_student_text">Guardar datos</string>
 </resources>
